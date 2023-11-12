@@ -10,7 +10,7 @@ pipeline {
         stage('OWASP DependencyCheck') {
             steps {
                 script {
-                    def dependencyCheckTool = tool 'dependency-check 8.4.2'
+                    def dependencyCheckTool = tool 'dependency-check 5.3.2'
                     sh "${dependencyCheckTool}/bin/dependency-check.sh --format HTML --format XML"
                 }
             }
